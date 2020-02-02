@@ -126,28 +126,7 @@ RUN set -e \
 		exit 1; \
 	fi
 
-ADD /binary/dockerizeme-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps
+ADD binary/dockerizeme-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
-
-
-
-
---------
-#RUN mkdir /opt/tomcat/
-#RUN mkdir /opt/java/
-#WORKDIR 
-#ENV <klucz> <wartość>
-
-#ADD /binary/dockerizeme-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps#
-
-#RUN wget https://cdn.azul.com/zulu/bin/zulu11.37.17-ca-jdk11.0.6-linux_x64.tar.gz
-#RUN wget https://cdn.azul.com/zulu/bin/zulu11.37.17-ca-jdk11.0.6-linux.x86_64.rpm
-#RUN wget https://cdn.azul.com/zulu/bin/zulu11.37.17-ca-jdk11.0.6-linux_amd64.deb
-
-#RUN tar xzvf zulu11*.tar.gz
-
-
-#HEALTHCHECK --interval=5m --timeout=2s --retries=4 CMD curl -f http://127.0.0.1:80 || exit 1
-#CMD ["/opt/tomcat/bin/catalina.sh", "run"]

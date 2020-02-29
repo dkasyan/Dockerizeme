@@ -130,3 +130,4 @@ ADD binary/dockerizeme-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
+CMD ["/usr/local/tomcat/bin/.startup.sh"]
